@@ -4,7 +4,7 @@ pipeline {
         stage('One') {
                 agent {
 			docker {
-				image: httpd:latest
+				image 'httpd:latest'
 			        }
 			steps  {
 			        echo 'Hi, Good Morning, Have a nice day'
