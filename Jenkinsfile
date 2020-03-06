@@ -1,4 +1,3 @@
-First pipeline prod ( jenkinsfile)
 pipeline {
     agent any
     stages {
@@ -34,7 +33,7 @@ pipeline {
                         stage('Integration test') {
                         agent {
                                 docker {
-                                        reuseNode false
+                                        reuseNode true
 					image 'ubuntu'
                                         }
 			}
