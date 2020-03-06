@@ -6,10 +6,10 @@ pipeline {
 			docker {
 				image 'httpd:latest'
 			        }
+		}
 			steps  {
 			        echo 'Hi, Good Morning, Have a nice day'
-			        }
-		}
+			}
 	}
     }
 }
