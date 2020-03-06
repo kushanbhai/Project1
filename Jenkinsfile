@@ -8,7 +8,7 @@ pipeline {
 			        }
 		}
 			steps  {
-			        echo 'Hi, Good Morning, Have a nice day'
+			        sh '/bin/bash'
 			}
 	}
     }
