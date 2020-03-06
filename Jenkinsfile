@@ -8,7 +8,7 @@ pipeline {
 			        }
 		}
 			steps  {
-			        sh '/bin/bash'
+			        sh 'cat /etc/os-release'
 			}
 	}
     }
