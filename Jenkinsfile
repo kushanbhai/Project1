@@ -7,11 +7,10 @@ pipeline {
 			
                 }
         }
-	    stage('Integration test') {
+	    stage('two') {
                         agent {
                                 docker {
-                                        reuseNode false
-					image 'ubuntu'
+                                        image 'httpd:latest'
                                         }
 			}
 	    }
