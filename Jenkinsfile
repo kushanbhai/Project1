@@ -4,13 +4,13 @@ pipeline {
         stage('One') {
                 agent {
 			docker {
-				image 'maven:3-alpine'
-			        }
-		}
-			steps  {
-			        sh 'mvn -v'
+				image 'httpd:latest'
+			}
+			steps {
+				sh 'htppd -v'
 				sh 'cat /etc/os-release'
 			}
+}
 	}
     }
 }
