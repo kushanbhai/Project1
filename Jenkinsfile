@@ -1,30 +1,21 @@
 pipeline {
-    agent any
+    agent any 
     stages {
-        stage('One') {
-                steps {
-                        echo 'Good morning'
-		}
-	}
-	    stage('two') {
-		    parallel {
-			    stage('test')
-			    agent {
-				    docker {
-					    image 'httpd:latest'
-				    }
-				    steps {
-					    sh 'httpd -v'
-					    sh 'cat /etc/os-release'
-				    }
-			    }
-		    }
-	    }
+        stage('Example Build') {
+            agent { docker 'maven:3-alpine' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Example Test') {
+            agent { docker 'openjdk:8-jre' } 
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
+        }
     }
 }
-    
-
-	
-
 		        
 			
