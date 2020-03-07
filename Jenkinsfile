@@ -8,7 +8,7 @@ pipeline {
 			        }
 		}
 			steps  {
-			        sh 'maven --version'
+			        sh 'mvn -v'
 				sh 'cat /etc/os-release'
 			}
 	}
