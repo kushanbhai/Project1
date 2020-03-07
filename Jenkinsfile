@@ -3,20 +3,12 @@ pipeline {
     stages {
         stage('One') {
                 steps {
-                        echo 'Hi, this is Zulaikha from edureka'
+                        echo 'Good morning'
 		}
-                        agent {
-                                docker {
-                                        image 'httpd:latest'
-                                        }
-				steps {
-					sh 'httpd -v'
-					sh 'cat /etc/os-release'
-				}
-			}
-	    }
+	}
     }
 }
+	
 
 		        
 			
