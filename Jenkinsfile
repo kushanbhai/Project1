@@ -4,11 +4,11 @@ pipeline {
                 agent {
 			docker {
 				image 'httpd:latest'
-			}
+			        }
 			steps {
-				sh 'htppd -v'
-				sh 'cat /etc/os-release'
-			}
+			       sh 'htppd -v'
+			       sh 'cat /etc/os-release'
+			       }
 }
 	}
     }
