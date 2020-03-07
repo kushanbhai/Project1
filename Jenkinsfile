@@ -4,11 +4,12 @@ pipeline {
         stage('One') {
                 agent {
 			docker {
-				image 'httpd:latest'
+				image 'maven:3-alpine'
 			        }
 		}
 			steps  {
-			        sh 'cat /etc/os-release'
+			        sh 'maven --version'
+				sh 'cat /etc/os-release'
 			}
 	}
     }
