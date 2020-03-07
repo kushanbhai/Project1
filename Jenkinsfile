@@ -1,17 +1,22 @@
 pipeline {
+    agent any
     stages {
         stage('One') {
-                agent {
-			docker {
-				image 'httpd:latest'
-			        }
-			steps {
-			       sh 'htppd -v'
-			       sh 'cat /etc/os-release'
-			       }
-}
-	}
+                steps {
+                        echo 'Hi, this is Zulaikha from edureka'
+			
+                }
+        }
+	    stage('Integration test') {
+                        agent {
+                                docker {
+                                        reuseNode false
+					image 'ubuntu'
+                                        }
+			}
+	    }
     }
 }
+
 		        
 			
