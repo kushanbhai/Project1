@@ -12,6 +12,10 @@ pipeline {
                                 docker {
                                         image 'httpd:latest'
                                         }
+				steps {
+					sh 'httpd -v'
+					sh 'cat /etc/os-release'
+				}
 			}
 	    }
     }
