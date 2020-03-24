@@ -4,12 +4,13 @@ pipeline {
         stage('first') {
             steps {
                 echo "Hello World!"
-            }  
+            }
         stage('two') {
             steps {
                 echo "good Morning"
+            }
+        }
         }
     }
-}
-    }
+    
 }
