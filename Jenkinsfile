@@ -5,6 +5,7 @@ pipeline {
              steps {
                echo "Hello world!"
              }
+         }   
          stage('second') {
              steps {
                echo "GoodMorning"
