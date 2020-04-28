@@ -1,16 +1,12 @@
 pipeline {
-     agent any
+     agent none
      stages {
-         stage('first') {
+         stage('Build') {
+             agent any
              steps {
-               echo "Hello world!"
-             }
-         }   
-         stage('second') {
-             steps {
-               echo "GoodMorning"
-             }     
-         }
-     }
- }
-
+                 checkout scm
+                 sh 'mvn test'
+            }
+        }
+    }
+}
